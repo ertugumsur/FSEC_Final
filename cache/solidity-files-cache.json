@@ -1,0 +1,261 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/ertugu/hardhat-tutorial/contracts/Token.sol": {
+      "lastModificationDate": 1734621688661,
+      "contentHash": "698951465f400281079fba22d6a0493c",
+      "sourceName": "contracts/Token.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MyTest"
+      ]
+    },
+    "/home/ertugu/hardhat-tutorial/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1734613109254,
+      "contentHash": "681c532e816169606d13a5fe8b475074",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "/home/ertugu/hardhat-tutorial/contracts/ReentrancyAttacker.sol": {
+      "lastModificationDate": 1734633497930,
+      "contentHash": "9987e44fab30fe2142e75275c9e38762",
+      "sourceName": "contracts/ReentrancyAttacker.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Attacker",
+        "IReentrancyBank"
+      ]
+    },
+    "/home/ertugu/hardhat-tutorial/contracts/ReentrancyVulnerable.sol": {
+      "lastModificationDate": 1734633504908,
+      "contentHash": "90c42f9e6aebb14a7ed6042b7d097bd6",
+      "sourceName": "contracts/ReentrancyVulnerable.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyBank"
+      ]
+    },
+    "/home/ertugu/hardhat-tutorial/contracts/DOSAuction.sol": {
+      "lastModificationDate": 1734635020502,
+      "contentHash": "d2f4c343810d3e67e58a3f461fc55d3f",
+      "sourceName": "contracts/DOSAuction.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Auction"
+      ]
+    },
+    "/home/ertugu/hardhat-tutorial/contracts/DOSAuctionCheater.sol": {
+      "lastModificationDate": 1734635841208,
+      "contentHash": "d5e12daa981dadc142f29d0b6d40fa2a",
+      "sourceName": "contracts/DOSAuctionCheater.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Cheater",
+        "IAuction"
+      ]
+    },
+    "/home/ertugu/hardhat-tutorial/contracts/IOUBank.sol": {
+      "lastModificationDate": 1734644465818,
+      "contentHash": "12e494920d59f01a4f8d2320985f4b72",
+      "sourceName": "contracts/IOUBank.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IOUBank"
+      ]
+    }
+  }
+}
