@@ -1,0 +1,1 @@
+In this project, I selected 3 different kinds of common Ethereum Network vulnerabilities. I developed 3 different sets of smart contracts and Javascript deployment code to implement these vulnerabilities in a hardhat local network and established ways to solve these vulnerabilities. 
