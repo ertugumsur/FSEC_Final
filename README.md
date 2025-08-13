@@ -1,10 +1,48 @@
-In this project, I selected 3 different kinds of common Ethereum Network vulnerabilities. I developed 3 different sets of smart contracts and Javascript deployment code to implement these vulnerabilities in a hardhat local network and
-established ways to solve these vulnerabilities. The first vulnerability I focused on was reentrancy attacks. These attacks exploit the smart contracts which update their variables after making transactions. For example, for a banking 
-smart contract, if a withdrawal function, first makes a transaction and then updates the balance status, this can allow malicious smart contracts to continuously send withdrawal requests draining the whole bank's funds. I implemented 
-this exact example in the ReentrancyDeploy.js file and accompanying ReentrancyVulnerable.sol and ReentrancyAttacker.sol files. These kinds of attacks can be easily solved by switching the order of operations for variable updates and 
-transactions. The second vulnerability I focused on was Denial of Service attacks. These attacks can vary from freezing the order of operations of a smart contract with transaction blocking code to forcing the smart contracts to spend 
-incredible transaction fees, draining the contracts of gas. In my implementation, I created an auction scenario where the auction contract has a bidding function that requires transferring the money back to the last bidder before 
-confirming the status of the new bidder. This caused a vulnerability that I exploited to freeze the auction process and ensure that the "cheating contract" always stays on top in bidding. For my contract's specific case, the best way to 
-solve this vulnerability is to have a withdraw function instead of calling the transactions with every change in the Auction. Lastly, I implemented an Integer Underflow/Overflow vulnerability. This implementation was pretty straightforward 
-where I used a similar banking smart contract with the reentrancy attack. The only difference was the integer values were limited to uint8 instead of int256. This allowed small values like a single eth (10^18 wei) to overflow multiple times 
-before getting rounded to zero. This last vulnerability is by far the easiest to solve since the Solidity language has a  built-in lot of integer overflow/underflow correction.
+# Ethereum Vulnerabilities Demonstration  
+
+This project implements and demonstrates **three common Ethereum smart contract vulnerabilities**, along with example fixes. All contracts are deployed and tested on a **Hardhat local network**.  
+
+---
+
+## Vulnerabilities Covered  
+
+### 1. Reentrancy Attack  
+- **Description:**  
+  Occurs when a smart contract updates its state variables **after** making an external call (e.g., sending funds), allowing a malicious contract to repeatedly call the vulnerable function before the balance is updated.  
+- **Example:**  
+  - `IOUBank.sol` – Banking contract updates balance after sending ETH.  
+  - `ReentrancyAttacker.sol` – Malicious contract exploits the reentrancy.  
+- **Test Script:** `test.js`  
+- **Fix:**  
+  Update state variables **before** making external calls (Checks–Effects–Interactions pattern).  
+
+---
+
+### 2. Denial of Service (DoS) Attack  
+- **Description:**  
+  DoS attacks can freeze contract operations or force excessive gas spending, preventing normal functionality.  
+- **Example:**  
+  - `DOSAuction.sol` – Auction contract refunds the previous highest bidder **before** updating the current highest bid.  
+  - `DOSAuctionCheater.sol` – Malicious contract blocks refunds, freezing the auction and staying as the highest bidder.  
+- **Test Script:** `test.js`  
+- **Fix:**  
+  Use a **withdraw pattern** where users manually withdraw their funds instead of automatic refunds.  
+
+---
+
+### 3. Integer Underflow / Overflow  
+- **Description:**  
+  Happens when arithmetic exceeds a variable’s maximum or minimum limit, wrapping around unexpectedly.  
+- **Example:**  
+  - `IOUBank.sol` (with `uint8`) demonstrates integer overflow on small values.  
+- **Test Script:** `test.js`  
+- **Fix:**  
+  Modern Solidity versions include built-in overflow/underflow checks. Use `uint256` and enable compiler safety checks.  
+
+---
+
+## Tech Stack  
+- **Language:** Solidity  
+- **Framework:** Hardhat  
+- **Scripting:** JavaScript (Node.js)  
+- **Blockchain:** Ethereum (local testnet)  
